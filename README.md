@@ -1,7 +1,7 @@
 # TinyCircuits TinyShield 16 Edge LEDs
-# ASD2411 Rev3
+# ASD2411 Rev4
 
-These are the design files for the TinyCircuits ASD2411 Rev 3 PCB.  This is a Tiny shield board (Square Version, 20mm x 20mm, or Circular 20mm diameter) that has a 16 LEDs around the border.
+These are the design files for the TinyCircuits ASD2411 Rev 4 PCB.  This is a Tiny shield board (Square Version, 20mm x 20mm, or Circular 20mm diameter) that has a 16 LEDs around the border.
 
 Format is in Cadsoft Eagle format - Eagle version 6.2 was used for the original design.
 
