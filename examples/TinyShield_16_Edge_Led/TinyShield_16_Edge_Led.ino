@@ -5,7 +5,7 @@ April 9 2014, by Ben Rose
 
 This example code is in the public domain.
 
-http://www.tiny-circuits.com
+http://www.tinycircuits.com
 
 */
 
