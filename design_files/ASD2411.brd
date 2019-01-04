@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -63,6 +63,11 @@
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="56" name="wert" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="Invisible" color="7" fill="1" visible="no" active="no"/>
+<layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
@@ -71,6 +76,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="no" active="no"/>
 <layer number="97" name="Info" color="7" fill="1" visible="no" active="no"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="101" name="Patch_Top" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
@@ -81,9 +87,12 @@
 <layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="108" name="Dimension_1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="109" name="Dimension_normal" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="111" name="tGTest" color="4" fill="1" visible="no" active="no"/>
 <layer number="112" name="bGTest" color="1" fill="1" visible="no" active="no"/>
+<layer number="113" name="HENWAY_PKG" color="12" fill="1" visible="yes" active="yes"/>
+<layer number="114" name="50_Electronics_Plate" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="115" name="henwayRES" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="117" name="mPads" color="7" fill="1" visible="no" active="no"/>
 <layer number="118" name="mVias" color="7" fill="1" visible="no" active="no"/>
@@ -121,6 +130,13 @@
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="152" name="mbDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
+<layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
+<layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
+<layer number="156" name="bCapacitor" color="7" fill="1" visible="no" active="yes"/>
+<layer number="157" name="tResistor" color="7" fill="1" visible="no" active="yes"/>
+<layer number="158" name="bResistor" color="7" fill="1" visible="no" active="yes"/>
+<layer number="159" name="henwayCAP" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
 <layer number="192" name="mBusses" color="7" fill="1" visible="no" active="no"/>
 <layer number="193" name="mPins" color="7" fill="1" visible="no" active="no"/>
@@ -153,8 +169,11 @@
 <layer number="222" name="222bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="223" name="223bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="224" name="224bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="248" name="Housing" color="7" fill="1" visible="no" active="yes"/>
-<layer number="249" name="Edge" color="7" fill="1" visible="no" active="yes"/>
+<layer number="231" name="Eagle3D_PG1" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="251" name="SMDround" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
@@ -181,10 +200,10 @@
 <wire x1="69.85" y1="0" x2="69.85" y2="50.8" width="0.127" layer="48"/>
 <wire x1="69.85" y1="50.8" x2="0" y2="50.8" width="0.127" layer="48"/>
 <wire x1="0" y1="50.8" x2="0" y2="0" width="0.127" layer="48"/>
-<dimension x1="10" y1="20" x2="30" y2="20" x3="20" y3="33.454653125" layer="48"/>
+<dimension x1="10" y1="30" x2="30" y2="30" x3="20" y3="33.454653125" layer="48"/>
 <text x="48.111025" y="4.365003125" size="0.889" layer="48">TinyShield - 16 Edge LEDs</text>
 <text x="44.986825" y="1.7714" size="0.889" layer="48">AS-PCB-ASD2411</text>
-<text x="67.3810375" y="1.6952" size="0.889" layer="48">4</text>
+<text x="67.3810375" y="1.6952" size="0.889" layer="48">5</text>
 <wire x1="10" y1="20" x2="30" y2="20" width="0.0254" layer="108" curve="-180"/>
 <wire x1="30" y1="20" x2="10" y2="20" width="0.0254" layer="108" curve="-180"/>
 <wire x1="10" y1="30" x2="30" y2="30" width="0.0254" layer="20"/>
@@ -200,14 +219,9 @@
 <hole x="28.5" y="11.5" drill="1.5"/>
 <hole x="11.5" y="11.5" drill="1.5"/>
 <dimension x1="10" y1="30" x2="10" y2="10" x3="7" y3="20" layer="48"/>
-<wire x1="31.27" y1="31.27" x2="31.27" y2="21.73" width="2.54" layer="46"/>
-<wire x1="31.27" y1="18.27" x2="31.27" y2="8.73" width="2.54" layer="46"/>
-<wire x1="31.27" y1="8.73" x2="21.73" y2="8.73" width="2.54" layer="46"/>
-<wire x1="18.27" y1="8.73" x2="8.73" y2="8.73" width="2.54" layer="46"/>
-<wire x1="8.73" y1="8.73" x2="8.73" y2="18.27" width="2.54" layer="46"/>
-<wire x1="8.73" y1="21.73" x2="8.73" y2="31.27" width="2.54" layer="46"/>
-<wire x1="8.73" y1="31.27" x2="18.27" y2="31.27" width="2.54" layer="46"/>
-<wire x1="21.73" y1="31.27" x2="31.27" y2="31.27" width="2.54" layer="46"/>
+<wire x1="31.27" y1="31.27" x2="31.27" y2="10" width="2.54" layer="46"/>
+<wire x1="8.73" y1="10" x2="8.73" y2="31.27" width="2.54" layer="46"/>
+<wire x1="8.73" y1="31.27" x2="31.27" y2="31.27" width="2.54" layer="46"/>
 <text x="26.7105" y="16.1433" size="0.635" layer="21" rot="SR234">D16</text>
 <text x="14.0867" y="14.8987" size="0.635" layer="21" rot="SR126">D1</text>
 <text x="12.8381" y="16.8807" size="0.635" layer="21" rot="SR110">D2</text>
@@ -4459,9 +4473,12 @@
 <rectangle x1="18.213340625" y1="25.4986375" x2="18.513059375" y2="25.50371875" layer="22"/>
 <rectangle x1="18.25398125" y1="25.50371875" x2="18.47241875" y2="25.50879375" layer="22"/>
 <rectangle x1="18.27938125" y1="25.508796875" x2="18.4419375" y2="25.513878125" layer="22"/>
-<text x="14.954203125" y="22.166928125" size="0.762" layer="22" rot="MR180">Tiny-Circuits.com</text>
-<text x="15.42664375" y="19.93680625" size="0.762" layer="22" rot="MR180">ASD2411 - Rev4</text>
+<text x="14.954203125" y="22.166928125" size="0.762" layer="22" rot="MR180">TinyCircuits.com</text>
+<text x="15.42664375" y="19.93680625" size="0.762" layer="22" rot="MR180">ASD2411 - Rev5</text>
 <text x="14.23538125" y="21.062028125" size="0.762" layer="22" rot="MR180">LED 16  TinyShield</text>
+<wire x1="10.1" y1="10.1778" x2="29.9" y2="10.1778" width="0.3556" layer="41"/>
+<wire x1="10.1" y1="10.1778" x2="29.9" y2="10.1778" width="0.3556" layer="42"/>
+<text x="11.4" y="9.0678" size="0.635" layer="20">^ V-SCORE EDGE ALONG OUTLINE ^</text>
 </plain>
 <libraries>
 <library name="tinycircuits">
@@ -4469,13 +4486,15 @@
 <packages>
 <package name="0402">
 <description>Multilayer SMD</description>
-<wire x1="-0.998" y1="0.3504" x2="0.9907" y2="0.3504" width="0.127" layer="51"/>
-<wire x1="0.9907" y1="0.3504" x2="0.9907" y2="-0.3432" width="0.127" layer="51"/>
-<wire x1="0.9907" y1="-0.3432" x2="-0.998" y2="-0.3432" width="0.127" layer="51"/>
-<wire x1="-0.998" y1="-0.3432" x2="-0.998" y2="0.3504" width="0.127" layer="51"/>
-<smd name="1" x="-0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
-<smd name="2" x="0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
-<text x="0" y="0" size="0.3048" layer="25" align="center">&gt;NAME</text>
+<wire x1="-1" y1="0.35" x2="1" y2="0.35" width="0.127" layer="51"/>
+<wire x1="1" y1="0.35" x2="1" y2="-0.35" width="0.127" layer="51"/>
+<wire x1="1" y1="-0.35" x2="-1" y2="-0.35" width="0.127" layer="51"/>
+<wire x1="-1" y1="-0.35" x2="-1" y2="0.35" width="0.127" layer="51"/>
+<smd name="1" x="-0.6" y="0" dx="0.65" dy="0.55" layer="1" cream="no"/>
+<smd name="2" x="0.6" y="0" dx="0.65" dy="0.55" layer="1" cream="no"/>
+<text x="0" y="0" size="0.5" layer="25" align="center">&gt;NAME</text>
+<rectangle x1="-0.925" y1="-0.275" x2="-0.275" y2="0.275" layer="31"/>
+<rectangle x1="0.275" y1="-0.275" x2="0.925" y2="0.275" layer="31"/>
 </package>
 <package name="LNJ_LED">
 <description>LED GREEN SIDE VIEW SMD</description>
@@ -4493,16 +4512,11 @@
 </package>
 <package name="DF12-32-DS">
 <description>Hirose DF12 Pattern with metal fitting, 32 positions</description>
-<wire x1="6.2319" y1="-2.8037" x2="-6.242" y2="-2.791" width="0.2" layer="39"/>
-<wire x1="-6.242" y1="-2.791" x2="-6.242" y2="2.7352" width="0.2" layer="39"/>
-<wire x1="5.3488" y1="-1.3975" x2="-5.392" y2="-1.4102" width="0.2032" layer="51"/>
-<wire x1="-5.392" y1="-1.4102" x2="-5.392" y2="1.2845" width="0.2032" layer="51"/>
-<wire x1="-5.392" y1="1.2845" x2="5.3488" y2="1.2972" width="0.2032" layer="51"/>
-<wire x1="5.2954" y1="-1.0943" x2="-5.3601" y2="-1.0867" width="0.2032" layer="21"/>
-<wire x1="5.3488" y1="1.2972" x2="5.3488" y2="-1.3975" width="0.2032" layer="51"/>
-<wire x1="6.2319" y1="2.7225" x2="6.2319" y2="-2.8037" width="0.2" layer="39"/>
-<wire x1="-6.242" y1="2.7352" x2="6.2319" y2="2.7225" width="0.2" layer="39"/>
-<circle x="-3.7338" y="3.0861" radius="0.127" width="0.127" layer="21"/>
+<wire x1="5.1" y1="-1.9" x2="-5.1" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-5.1" y1="-1.9" x2="-5.1" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-5.1" y1="1.9" x2="5.1" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="5.1" y1="1.9" x2="5.1" y2="-1.9" width="0.2032" layer="51"/>
+<circle x="-3.8" y="3" radius="0.127" width="0.127" layer="21"/>
 <smd name="F1" x="-5.5" y="0" dx="0.9" dy="1.8" layer="1"/>
 <smd name="17" x="0.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="19" x="0.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
@@ -4537,7 +4551,7 @@
 <smd name="31" x="3.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="32" x="3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="2" x="-3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
-<text x="0" y="0" size="0.635" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="0.762" layer="25" align="center">&gt;NAME</text>
 <rectangle x1="-0.8829" y1="1.651" x2="0.3871" y2="1.8542" layer="51" rot="R90"/>
 <rectangle x1="-1.3833" y1="-1.9685" x2="-0.1133" y2="-1.7653" layer="51" rot="R90"/>
 <rectangle x1="-1.3858" y1="1.6535" x2="-0.1158" y2="1.8567" layer="51" rot="R90"/>
@@ -4570,9 +4584,9 @@
 <rectangle x1="-3.3797" y1="-1.9659" x2="-2.1097" y2="-1.7627" layer="51" rot="R90"/>
 <rectangle x1="-3.8852" y1="-1.9659" x2="-2.6152" y2="-1.7627" layer="51" rot="R90"/>
 <rectangle x1="-4.3855" y1="-1.9659" x2="-3.1155" y2="-1.7627" layer="51" rot="R90"/>
-<hole x="-4.8" y="1.5" drill="0.6"/>
-<hole x="4.8" y="1.5" drill="0.6"/>
-<circle x="-4.2418" y="2.3241" radius="0.127" width="0.127" layer="51"/>
+<hole x="-4.8" y="1.5" drill="0.65"/>
+<hole x="4.8" y="1.5" drill="0.65"/>
+<circle x="-3.8" y="3" radius="0.127" width="0.127" layer="51"/>
 <polygon width="0.127" layer="29">
 <vertex x="-5.5626" y="1.4986" curve="90"/>
 <vertex x="-4.8006" y="0.7366" curve="90"/>
@@ -4617,19 +4631,26 @@
 <rectangle x1="2.1378" y1="1.2066" x2="2.3578" y2="2.5066" layer="31"/>
 <rectangle x1="2.6378" y1="1.2066" x2="2.8578" y2="2.5066" layer="31"/>
 <rectangle x1="3.1378" y1="1.2066" x2="3.3578" y2="2.5066" layer="31"/>
+<polygon width="0.127" layer="30">
+<vertex x="-5.5626" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="0.7366" curve="90"/>
+<vertex x="-4.0386" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="2.2606" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="4.0386" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="0.7366" curve="90"/>
+<vertex x="5.5626" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="2.2606" curve="90"/>
+</polygon>
 </package>
 <package name="DF12-32-DP">
 <description>Hirose DF12 Pattern with metal fitting, 32 positions</description>
-<wire x1="6.2319" y1="-2.8037" x2="-6.242" y2="-2.791" width="0.2" layer="39"/>
-<wire x1="-6.242" y1="-2.791" x2="-6.242" y2="2.7352" width="0.2" layer="39"/>
-<wire x1="5.3488" y1="-1.3975" x2="-5.392" y2="-1.4102" width="0.2032" layer="51"/>
-<wire x1="-5.392" y1="-1.4102" x2="-5.392" y2="1.2845" width="0.2032" layer="51"/>
-<wire x1="-5.392" y1="1.2845" x2="5.3488" y2="1.2972" width="0.2032" layer="51"/>
-<wire x1="5.2954" y1="-1.0943" x2="-5.3601" y2="-1.0867" width="0.2032" layer="21"/>
-<wire x1="5.3488" y1="1.2972" x2="5.3488" y2="-1.3975" width="0.2032" layer="51"/>
-<wire x1="6.2319" y1="2.7225" x2="6.2319" y2="-2.8037" width="0.2" layer="39"/>
-<wire x1="-6.242" y1="2.7352" x2="6.2319" y2="2.7225" width="0.2" layer="39"/>
-<circle x="-3.7592" y="-2.9972" radius="0.127" width="0.127" layer="21"/>
+<wire x1="5.1" y1="-1.9" x2="-5.1" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-5.1" y1="-1.9" x2="-5.1" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-5.1" y1="1.9" x2="5.1" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="5.1" y1="1.9" x2="5.1" y2="-1.9" width="0.2032" layer="51"/>
+<circle x="-3.8" y="-3" radius="0.127" width="0.127" layer="21"/>
 <smd name="F1" x="-5.5" y="0" dx="0.9" dy="1.8" layer="1"/>
 <smd name="18" x="0.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="20" x="0.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
@@ -4664,7 +4685,7 @@
 <smd name="32" x="3.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="31" x="3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="1" x="-3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
-<text x="0" y="0" size="0.635" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="0.762" layer="25" align="center">&gt;NAME</text>
 <rectangle x1="-0.8829" y1="1.651" x2="0.3871" y2="1.8542" layer="51" rot="R90"/>
 <rectangle x1="-1.3833" y1="-1.9685" x2="-0.1133" y2="-1.7653" layer="51" rot="R90"/>
 <rectangle x1="-1.3858" y1="1.6535" x2="-0.1158" y2="1.8567" layer="51" rot="R90"/>
@@ -4697,9 +4718,9 @@
 <rectangle x1="-3.3797" y1="-1.9659" x2="-2.1097" y2="-1.7627" layer="51" rot="R90"/>
 <rectangle x1="-3.8852" y1="-1.9659" x2="-2.6152" y2="-1.7627" layer="51" rot="R90"/>
 <rectangle x1="-4.3855" y1="-1.9659" x2="-3.1155" y2="-1.7627" layer="51" rot="R90"/>
-<hole x="-4.8" y="1.5" drill="0.6"/>
-<hole x="4.8" y="1.5" drill="0.6"/>
-<circle x="-4.2164" y="-2.413" radius="0.127" width="0.127" layer="51"/>
+<hole x="-4.8" y="1.5" drill="0.65"/>
+<hole x="4.8" y="1.5" drill="0.65"/>
+<circle x="-3.8" y="-3" radius="0.127" width="0.127" layer="51"/>
 <polygon width="0.127" layer="29">
 <vertex x="-5.5626" y="1.4986" curve="90"/>
 <vertex x="-4.8006" y="0.7366" curve="90"/>
@@ -4744,6 +4765,18 @@
 <rectangle x1="2.6378" y1="-2.5034" x2="2.8578" y2="-1.2034" layer="31"/>
 <rectangle x1="3.1378" y1="-2.5034" x2="3.3578" y2="-1.2034" layer="31"/>
 <rectangle x1="3.6378" y1="-2.5034" x2="3.8578" y2="-1.2034" layer="31"/>
+<polygon width="0.127" layer="30">
+<vertex x="-5.5626" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="0.7366" curve="90"/>
+<vertex x="-4.0386" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="2.2606" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="4.0386" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="0.7366" curve="90"/>
+<vertex x="5.5626" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="2.2606" curve="90"/>
+</polygon>
 </package>
 <package name="DOCFIELD-TINYCIRCUITS-PCB">
 <wire x1="0.04318125" y1="0.034290625" x2="17.82318125" y2="0.034290625" width="0.127" layer="48"/>
@@ -4770,7 +4803,7 @@
 <text x="0.55118125" y="5.012690625" size="0.635" layer="48">TITLE:</text>
 <text x="18.25498125" y="0.415290625" size="0.635" layer="48">Sheet:</text>
 <text x="22.31898125" y="2.879090625" size="0.635" layer="48">REV:</text>
-<text x="9.79678125" y="7.001003125" size="0.635" layer="48">http://www.Tiny-Circuits.com</text>
+<text x="9.79678125" y="7.001003125" size="0.635" layer="48">http://www.TinyCircuits.com</text>
 <rectangle x1="1.2214875" y1="6.306059375" x2="1.28091875" y2="6.307584375" layer="48"/>
 <rectangle x1="1.2214875" y1="6.307584375" x2="1.28091875" y2="6.309103125" layer="48"/>
 <rectangle x1="1.2214875" y1="6.30910625" x2="1.28091875" y2="6.31063125" layer="48"/>
@@ -15021,120 +15054,90 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="J1" library="tinycircuits" package="DF12-32-DP" value="DF12-32-DP" x="20" y="14.3" smashed="yes" rot="R180">
+<element name="J1" library="tinycircuits" package="DF12-32-DP" value="DF12-32-DP" x="20" y="14.3" rot="R180">
 <attribute name="PARTNO" value="AS-ITM-00015" x="20" y="14.3" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="14.8374" y="17.8776" size="0.635" layer="25" rot="R180"/>
-<attribute name="VALUE" value="DF12-32-DP" x="26.1163" y="18.5887" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="J2" library="tinycircuits" package="DF12-32-DS" value="DF12-32-DS" x="20" y="14.3" smashed="yes" rot="MR0">
+<element name="J2" library="tinycircuits" package="DF12-32-DS" value="DF12-32-DS" x="20" y="14.3" rot="MR0">
 <attribute name="PARTNO" value="AS-ITM-00012" x="20" y="14.3" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="NAME" x="26.0769" y="17.301" size="1.27" layer="26" rot="MR0"/>
-<attribute name="VALUE" value="DF12-32-DS" x="26.1163" y="10.0113" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="R1" library="tinycircuits" package="0402" value="300" x="16.3" y="21.3" smashed="yes" rot="R270">
+<element name="R1" library="tinycircuits" package="0402" value="300" x="16.3" y="21.3" rot="R270">
 <attribute name="PARTNO" value="AS-ITM-00016" x="16.3" y="21.3" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="16.046" y="20.12525" size="0.635" layer="25" rot="R270"/>
-<attribute name="VALUE" value="300" x="14.395" y="21.935" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R2" library="tinycircuits" package="0402" value="300" x="17.7" y="21.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="17.42695" y="20.1316" size="0.635" layer="25" rot="R270"/>
-<attribute name="VALUE" value="300" x="15.795" y="21.935" size="1.27" layer="27" rot="R270"/>
+<element name="R2" library="tinycircuits" package="0402" value="300" x="17.7" y="21.3" rot="R270">
 <attribute name="PARTNO" value="AS-ITM-00016" x="17.7" y="21.3" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R3" library="tinycircuits" package="0402" value="300" x="19.1" y="21.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.8333" y="20.13795" size="0.635" layer="25" rot="R270"/>
-<attribute name="VALUE" value="300" x="17.195" y="21.935" size="1.27" layer="27" rot="R270"/>
+<element name="R3" library="tinycircuits" package="0402" value="300" x="19.1" y="21.3" rot="R270">
 <attribute name="PARTNO" value="AS-ITM-00016" x="19.1" y="21.3" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R4" library="tinycircuits" package="0402" value="300" x="20.5" y="21.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="20.21425" y="20.1189" size="0.635" layer="25" rot="R270"/>
-<attribute name="VALUE" value="300" x="18.595" y="21.935" size="1.27" layer="27" rot="R270"/>
+<element name="R4" library="tinycircuits" package="0402" value="300" x="20.5" y="21.3" rot="R270">
 <attribute name="PARTNO" value="AS-ITM-00016" x="20.5" y="21.3" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R5" library="tinycircuits" package="0402" value="300" x="21.9" y="21.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.65235" y="20.12525" size="0.635" layer="25" rot="R270"/>
-<attribute name="VALUE" value="300" x="19.995" y="21.935" size="1.27" layer="27" rot="R270"/>
+<element name="R5" library="tinycircuits" package="0402" value="300" x="21.9" y="21.3" rot="R270">
 <attribute name="PARTNO" value="AS-ITM-00016" x="21.9" y="21.3" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="D1" library="tinycircuits" package="LNJ_LED" value="GREEN" x="12.6638" y="14.5258" smashed="yes" rot="R36">
+<element name="D1" library="tinycircuits" package="LNJ_LED" value="GREEN" x="12.6638" y="14.5258" rot="R36">
 <attribute name="PARTNO" value="AS-ITM-00011" x="12.6638" y="14.5258" size="1.778" layer="27" rot="R36" display="off"/>
-<attribute name="NAME" x="14.108221875" y="14.902796875" size="0.635" layer="25" rot="SR126"/>
-<attribute name="VALUE" value="GREEN" x="14.951459375" y="14.61806875" size="1.27" layer="27" rot="R126"/>
+<attribute name="PNPROTATION" value="90" x="12.6638" y="14.5258" size="1.778" layer="27" rot="R36" display="off"/>
 </element>
-<element name="D5" library="tinycircuits" package="LNJ_LED" value="GREEN" x="12.1158" y="24.6746" smashed="yes" rot="R330">
+<element name="D5" library="tinycircuits" package="LNJ_LED" value="GREEN" x="12.1158" y="24.6746" rot="R330">
 <attribute name="PARTNO" value="AS-ITM-00011" x="12.1158" y="24.6746" size="1.778" layer="27" rot="R330" display="off"/>
-<attribute name="NAME" x="13.09516875" y="23.658621875" size="0.635" layer="25" rot="R60"/>
-<attribute name="VALUE" value="GREEN" x="13.130571875" y="22.62224375" size="1.27" layer="27" rot="R60"/>
+<attribute name="PNPROTATION" value="90" x="12.1158" y="24.6746" size="1.778" layer="27" rot="R330" display="off"/>
 </element>
-<element name="D12" library="tinycircuits" package="LNJ_LED" value="GREEN" x="27.8842" y="24.6746" smashed="yes" rot="R210">
+<element name="D12" library="tinycircuits" package="LNJ_LED" value="GREEN" x="27.8842" y="24.6746" rot="R210">
 <attribute name="PARTNO" value="AS-ITM-00011" x="27.8842" y="24.6746" size="1.778" layer="27" rot="R210" display="off"/>
-<attribute name="NAME" x="26.421440625" y="24.68220625" size="0.635" layer="25" rot="R300"/>
-<attribute name="VALUE" value="GREEN" x="25.59941875" y="24.82195" size="1.27" layer="27" rot="R300"/>
+<attribute name="PNPROTATION" value="90" x="27.8842" y="24.6746" size="1.778" layer="27" rot="R210" display="off"/>
 </element>
-<element name="D16" library="tinycircuits" package="LNJ_LED" value="GREEN" x="27.3362" y="14.5258" smashed="yes" rot="R144">
+<element name="D16" library="tinycircuits" package="LNJ_LED" value="GREEN" x="27.3362" y="14.5258" rot="R144">
 <attribute name="PARTNO" value="AS-ITM-00011" x="27.3362" y="14.5258" size="1.778" layer="27" rot="R144" display="off"/>
-<attribute name="NAME" x="26.920196875" y="15.988" size="0.635" layer="25" rot="SR234"/>
-<attribute name="VALUE" value="GREEN" x="26.54150625" y="16.672978125" size="1.27" layer="27" rot="R234"/>
+<attribute name="PNPROTATION" value="90" x="27.3362" y="14.5258" size="1.778" layer="27" rot="R144" display="off"/>
 </element>
-<element name="D2" library="tinycircuits" package="LNJ_LED" value="GREEN" x="11.41" y="16.8518" smashed="yes" rot="R20">
+<element name="D2" library="tinycircuits" package="LNJ_LED" value="GREEN" x="11.41" y="16.8518" rot="R20">
 <attribute name="PARTNO" value="AS-ITM-00011" x="11.41" y="16.8518" size="1.778" layer="27" rot="R20" display="off"/>
-<attribute name="NAME" x="12.8469625" y="16.88330625" size="0.635" layer="25" rot="SR110"/>
-<attribute name="VALUE" value="GREEN" x="13.634475" y="16.309934375" size="1.27" layer="27" rot="R110"/>
+<attribute name="PNPROTATION" value="90" x="11.41" y="16.8518" size="1.778" layer="27" rot="R20" display="off"/>
 </element>
-<element name="D6" library="tinycircuits" package="LNJ_LED" value="GREEN" x="13.8248" y="26.7292" smashed="yes" rot="R312">
+<element name="D6" library="tinycircuits" package="LNJ_LED" value="GREEN" x="13.8248" y="26.7292" rot="R312">
 <attribute name="PARTNO" value="AS-ITM-00011" x="13.8248" y="26.7292" size="1.778" layer="27" rot="R312" display="off"/>
-<attribute name="NAME" x="14.34315625" y="25.52026875" size="0.635" layer="25" rot="R42"/>
-<attribute name="VALUE" value="GREEN" x="14.155690625" y="24.463709375" size="1.27" layer="27" rot="R42"/>
+<attribute name="PNPROTATION" value="90" x="13.8248" y="26.7292" size="1.778" layer="27" rot="R312" display="off"/>
 </element>
-<element name="D11" library="tinycircuits" package="LNJ_LED" value="GREEN" x="26.1752" y="26.7292" smashed="yes" rot="R228">
+<element name="D11" library="tinycircuits" package="LNJ_LED" value="GREEN" x="26.1752" y="26.7292" rot="R228">
 <attribute name="PARTNO" value="AS-ITM-00011" x="26.1752" y="26.7292" size="1.778" layer="27" rot="R228" display="off"/>
-<attribute name="NAME" x="24.76581875" y="26.316115625" size="0.635" layer="25" rot="R318"/>
-<attribute name="VALUE" value="GREEN" x="23.956709375" y="26.163303125" size="1.27" layer="27" rot="R318"/>
+<attribute name="PNPROTATION" value="90" x="26.1752" y="26.7292" size="1.778" layer="27" rot="R228" display="off"/>
 </element>
-<element name="D15" library="tinycircuits" package="LNJ_LED" value="GREEN" x="28.59" y="16.8518" smashed="yes" rot="R160">
+<element name="D15" library="tinycircuits" package="LNJ_LED" value="GREEN" x="28.59" y="16.8518" rot="R160">
 <attribute name="PARTNO" value="AS-ITM-00011" x="28.59" y="16.8518" size="1.778" layer="27" rot="R160" display="off"/>
-<attribute name="NAME" x="27.65563125" y="17.966528125" size="0.635" layer="25" rot="SR250"/>
-<attribute name="VALUE" value="GREEN" x="27.234246875" y="18.69675625" size="1.27" layer="27" rot="R250"/>
+<attribute name="PNPROTATION" value="90" x="28.59" y="16.8518" size="1.778" layer="27" rot="R160" display="off"/>
 </element>
-<element name="D3" library="tinycircuits" package="LNJ_LED" value="GREEN" x="10.86" y="19.4614" smashed="yes" rot="R3">
+<element name="D3" library="tinycircuits" package="LNJ_LED" value="GREEN" x="10.86" y="19.4614" rot="R3">
 <attribute name="PARTNO" value="AS-ITM-00011" x="10.86" y="19.4614" size="1.778" layer="27" rot="R3" display="off"/>
-<attribute name="NAME" x="11.600909375" y="20.19725625" size="0.635" layer="25" rot="R273"/>
-<attribute name="VALUE" value="GREEN" x="12.828853125" y="18.292834375" size="1.27" layer="27" rot="R93"/>
+<attribute name="PNPROTATION" value="90" x="10.86" y="19.4614" size="1.778" layer="27" rot="R3" display="off"/>
 </element>
-<element name="D4" library="tinycircuits" package="LNJ_LED" value="GREEN" x="11.1096" y="22.183" smashed="yes" rot="R346">
+<element name="D4" library="tinycircuits" package="LNJ_LED" value="GREEN" x="11.1096" y="22.183" rot="R346">
 <attribute name="PARTNO" value="AS-ITM-00011" x="11.1096" y="22.183" size="1.778" layer="27" rot="R346" display="off"/>
-<attribute name="NAME" x="12.308609375" y="21.46071875" size="0.635" layer="25" rot="R76"/>
-<attribute name="VALUE" value="GREEN" x="12.650765625" y="20.489859375" size="1.27" layer="27" rot="R76"/>
+<attribute name="PNPROTATION" value="90" x="11.1096" y="22.183" size="1.778" layer="27" rot="R346" display="off"/>
 </element>
-<element name="D14" library="tinycircuits" package="LNJ_LED" value="GREEN" x="29.14" y="19.4614" smashed="yes" rot="R177">
+<element name="D14" library="tinycircuits" package="LNJ_LED" value="GREEN" x="29.14" y="19.4614" rot="R177">
 <attribute name="PARTNO" value="AS-ITM-00011" x="29.14" y="19.4614" size="1.778" layer="27" rot="R177" display="off"/>
-<attribute name="NAME" x="27.94064375" y="20.299253125" size="0.635" layer="25" rot="R267"/>
-<attribute name="VALUE" value="GREEN" x="27.304075" y="20.829359375" size="1.27" layer="27" rot="R267"/>
+<attribute name="PNPROTATION" value="90" x="29.14" y="19.4614" size="1.778" layer="27" rot="R177" display="off"/>
 </element>
-<element name="D13" library="tinycircuits" package="LNJ_LED" value="GREEN" x="28.8904" y="22.183" smashed="yes" rot="R194">
+<element name="D13" library="tinycircuits" package="LNJ_LED" value="GREEN" x="28.8904" y="22.183" rot="R194">
 <attribute name="PARTNO" value="AS-ITM-00011" x="28.8904" y="22.183" size="1.778" layer="27" rot="R194" display="off"/>
-<attribute name="NAME" x="27.470771875" y="22.636996875" size="0.635" layer="25" rot="R284"/>
-<attribute name="VALUE" value="GREEN" x="26.73474375" y="22.9544125" size="1.27" layer="27" rot="R284"/>
+<attribute name="PNPROTATION" value="90" x="28.8904" y="22.183" size="1.778" layer="27" rot="R194" display="off"/>
 </element>
-<element name="D7" library="tinycircuits" package="LNJ_LED" value="GREEN" x="16.03" y="28.2326" smashed="yes" rot="R295">
+<element name="D7" library="tinycircuits" package="LNJ_LED" value="GREEN" x="16.03" y="28.2326" rot="R295">
 <attribute name="PARTNO" value="AS-ITM-00011" x="16.03" y="28.2326" size="1.778" layer="27" rot="R295" display="off"/>
-<attribute name="NAME" x="16.27240625" y="26.905096875" size="0.635" layer="25" rot="R25"/>
-<attribute name="VALUE" value="GREEN" x="15.684071875" y="25.969353125" size="1.27" layer="27" rot="R25"/>
+<attribute name="PNPROTATION" value="90" x="16.03" y="28.2326" size="1.778" layer="27" rot="R295" display="off"/>
 </element>
-<element name="D8" library="tinycircuits" package="LNJ_LED" value="GREEN" x="18.6" y="29.05" smashed="yes" rot="R279">
+<element name="D8" library="tinycircuits" package="LNJ_LED" value="GREEN" x="18.6" y="29.05" rot="R279">
 <attribute name="PARTNO" value="AS-ITM-00011" x="18.6" y="29.05" size="1.778" layer="27" rot="R279" display="off"/>
-<attribute name="NAME" x="18.399609375" y="27.67939375" size="0.635" layer="25" rot="R9"/>
-<attribute name="VALUE" value="GREEN" x="17.6436375" y="26.969778125" size="1.27" layer="27" rot="R9"/>
+<attribute name="PNPROTATION" value="90" x="18.6" y="29.05" size="1.778" layer="27" rot="R279" display="off"/>
 </element>
-<element name="D9" library="tinycircuits" package="LNJ_LED" value="GREEN" x="21.4" y="29.05" smashed="yes" rot="R261">
+<element name="D9" library="tinycircuits" package="LNJ_LED" value="GREEN" x="21.4" y="29.05" rot="R261">
 <attribute name="PARTNO" value="AS-ITM-00011" x="21.4" y="29.05" size="1.778" layer="27" rot="R261" display="off"/>
-<attribute name="NAME" x="20.36190625" y="27.8798875" size="0.635" layer="25" rot="R351"/>
-<attribute name="VALUE" value="GREEN" x="19.847625" y="27.367121875" size="1.27" layer="27" rot="R351"/>
+<attribute name="PNPROTATION" value="90" x="21.4" y="29.05" size="1.778" layer="27" rot="R261" display="off"/>
 </element>
-<element name="D10" library="tinycircuits" package="LNJ_LED" value="GREEN" x="23.97" y="28.2326" smashed="yes" rot="R245">
+<element name="D10" library="tinycircuits" package="LNJ_LED" value="GREEN" x="23.97" y="28.2326" rot="R245">
 <attribute name="PARTNO" value="AS-ITM-00011" x="23.97" y="28.2326" size="1.778" layer="27" rot="R245" display="off"/>
-<attribute name="NAME" x="22.756015625" y="27.400128125" size="0.635" layer="25" rot="R335"/>
-<attribute name="VALUE" value="GREEN" x="22.0139" y="27.04280625" size="1.27" layer="27" rot="R335"/>
+<attribute name="PNPROTATION" value="90" x="23.97" y="28.2326" size="1.778" layer="27" rot="R245" display="off"/>
 </element>
 <element name="U$1" library="tinycircuits" package="DOCFIELD-TINYCIRCUITS-PCB" value="" x="43.91151875" y="0">
 <attribute name="NO_BOM" value="TRUE" x="43.91151875" y="0" size="1.778" layer="27" display="off"/>
@@ -15636,196 +15639,6 @@ design rules under a new name.</description>
 <wire x1="16.256" y1="12.5059" x2="16.25" y2="12.4999" width="0.254" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="18,29,57e4bda7340e22b2"/>
-<approved hash="18,29,669ff42830722be7"/>
-<approved hash="18,29,6eb7c2519030cf6f"/>
-<approved hash="18,29,89e7832727f5c9f1"/>
-<approved hash="18,29,f8d819f7ef94b91e"/>
-<approved hash="18,29,828a50d04f254eb8"/>
-<approved hash="18,29,4f17af6f2d07f10a"/>
-<approved hash="18,29,4204c5a7502f0de0"/>
-<approved hash="18,29,fa261ea42d57851f"/>
-<approved hash="18,29,883ab0870079ba95"/>
-<approved hash="18,29,b46124b76e9248b2"/>
-<approved hash="18,29,b4570b546a6ed9a7"/>
-<approved hash="18,29,1e47de0771d722f7"/>
-<approved hash="18,29,98849c19dcc6ac08"/>
-<approved hash="18,29,87eb5f87469907e1"/>
-<approved hash="18,29,aac9f5b73e7a6ea2"/>
-<approved hash="18,29,92c5b0250c85b4ff"/>
-<approved hash="18,29,e05919ad83a0a80c"/>
-<approved hash="18,29,f6c3e25ee43a58b9"/>
-<approved hash="18,29,8deb9bde76efbb4b"/>
-<approved hash="18,29,804d030b8df0ab00"/>
-<approved hash="18,29,ccf5504da1cfbf00"/>
-<approved hash="18,29,d21c08a8c28ebbd8"/>
-<approved hash="18,29,d8a4317612c68c72"/>
-<approved hash="18,29,f0155c3d54a0f4a2"/>
-<approved hash="18,29,b4c5848ba7d228fd"/>
-<approved hash="18,29,f809200d3da2ee40"/>
-<approved hash="18,29,fdf630d58f728e9e"/>
-<approved hash="18,29,66cd37ea1b570f7c"/>
-<approved hash="18,29,f20bc6c62b34c5a3"/>
-<approved hash="18,29,04a2a6b2a4caead1"/>
-<approved hash="18,29,5085487369a577ba"/>
-<approved hash="18,29,fff9fa7bfa24639e"/>
-<approved hash="18,29,0f967f41d4329a5d"/>
-<approved hash="18,29,51cca33a05279817"/>
-<approved hash="18,29,74e46b4f4097cae0"/>
-<approved hash="18,29,161081dd4b36f34a"/>
-<approved hash="18,29,47ed57231362f500"/>
-<approved hash="18,29,0074b122aae9b041"/>
-<approved hash="18,29,91fd2c96b0203ce5"/>
-<approved hash="18,29,308b874ef1fda777"/>
-<approved hash="18,29,93470c3319132324"/>
-<approved hash="18,29,8d722547366c4f1f"/>
-<approved hash="18,29,4af3f08d51876780"/>
-<approved hash="18,29,32ae47ae54e937fe"/>
-<approved hash="18,29,76dfcd9f4e8be3ca"/>
-<approved hash="18,29,1cac9fa2344eed12"/>
-<approved hash="18,29,c912b465732d1872"/>
-<approved hash="18,29,31ff9834f2fe350a"/>
-<approved hash="18,29,c8b4e6583789b540"/>
-<approved hash="18,29,53357cc3686d50ff"/>
-<approved hash="18,29,f8d2563f85ebb866"/>
-<approved hash="18,29,5d2a4001adac6aae"/>
-<approved hash="18,29,dd83404958eddbf0"/>
-<approved hash="18,29,f78ff2b3d2a45d03"/>
-<approved hash="18,29,9ee6ede4edfa9ef8"/>
-<approved hash="18,29,9bf882fa82fa9bf4"/>
-<approved hash="18,29,5cf49efa9efc5cf2"/>
-<approved hash="18,29,42f259fc59ff42f1"/>
-<approved hash="18,29,61f158ff58f261fc"/>
-<approved hash="18,29,88fc67f267f488fa"/>
-<approved hash="18,29,ebfa82f482f8ebfa"/>
-<approved hash="18,29,c6fae5f8e5c6c6c4"/>
-<approved hash="18,29,e5c4c4c6c4c2e5c0"/>
-<approved hash="18,29,84c0ebc2ebc084c2"/>
-<approved hash="18,29,67c286c086cd67cb"/>
-<approved hash="18,29,7acb62cd62ce7ac8"/>
-<approved hash="18,29,78c87fce7fc978cf"/>
-<approved hash="18,29,61cf7cc97cd461d2"/>
-<approved hash="18,29,82d27dd47dd682d0"/>
-<approved hash="18,29,efd0fed6fed6efd4"/>
-<approved hash="18,29,9b5b2559b9dca93d"/>
-<approved hash="18,29,6a9651c26c9047ed"/>
-<approved hash="18,29,216e360b48928a79"/>
-<approved hash="18,29,9114fc6e5f6b887a"/>
-<approved hash="18,29,e8eef06f90f1b0bf"/>
-<approved hash="18,29,9453d2665a71b483"/>
-<approved hash="18,29,5bde1633ebe36d4b"/>
-<approved hash="18,29,d3173a2b52441f4d"/>
-<approved hash="18,29,2d90d7bd17111c2d"/>
-<approved hash="18,29,e2ed93410388e8b6"/>
-<approved hash="18,29,227f168130839cf4"/>
-<approved hash="18,29,8c10c1000f96afb1"/>
-<approved hash="18,29,20a716a074ba6627"/>
-<approved hash="18,29,bf5e0dab9686abb2"/>
-<approved hash="18,29,99406fc6302418ae"/>
-<approved hash="18,29,334ea5b2a976893a"/>
-<approved hash="18,29,9beacbe8fbd73433"/>
-<approved hash="18,29,ca220d22a361875d"/>
-<approved hash="18,29,4b82c0492dfe6052"/>
-<approved hash="18,29,050daf54ad5b893e"/>
-<approved hash="18,29,c101fb4734f13879"/>
-<approved hash="18,29,b670871fdaef2aed"/>
-<approved hash="18,29,ffea8e22f72a0002"/>
-<approved hash="18,29,0d77461bbdad9af2"/>
-<approved hash="18,29,40984cd2f9892099"/>
-<approved hash="18,29,5e48be2766bfb905"/>
-<approved hash="18,29,ad9e3c2f168dc027"/>
-<approved hash="18,29,0f0e300a11ac59ef"/>
-<approved hash="18,29,06f275313b00c693"/>
-<approved hash="18,29,5050f4aca9439b8d"/>
-<approved hash="18,29,9c107873acbea436"/>
-<approved hash="18,29,1a1a1e14628fb8d5"/>
-<approved hash="18,29,08e05a336f09898d"/>
-<approved hash="18,29,3c9f06d157fc0a6d"/>
-<approved hash="18,29,80c07130857a5406"/>
-<approved hash="18,29,3461620830113aef"/>
-<approved hash="18,29,047004140a7efb5b"/>
-<approved hash="18,29,27cbc3ced0045c1d"/>
-<approved hash="18,29,0489f6c8cce84d09"/>
-<approved hash="18,29,3ce7c0a291c1dbc0"/>
-<approved hash="18,29,2558db0cd0314667"/>
-<approved hash="18,29,a3e2bfbba476ca7b"/>
-<approved hash="18,29,20527a178932f9b6"/>
-<approved hash="18,29,93284f132999def4"/>
-<approved hash="18,29,e066631fed30cbe8"/>
-<approved hash="18,29,402f0c9ff6b90f54"/>
-<approved hash="18,29,20b65da46bba5c22"/>
-<approved hash="18,29,0830465bed0c8476"/>
-<approved hash="18,29,5e9e38aab1d4652c"/>
-<approved hash="18,29,2a4a976be83f8ea6"/>
-<approved hash="18,29,feb91f999531e5ac"/>
-<approved hash="18,29,48616c38a7dccc6b"/>
-<approved hash="18,29,c4cf4ab20c206a69"/>
-<approved hash="18,29,dc8211daf62d7d01"/>
-<approved hash="18,29,4a1a9a819b1c6349"/>
-<approved hash="18,29,0af4c6ded864998b"/>
-<approved hash="18,29,e9a3dac6d38275f1"/>
-<approved hash="18,29,2395c873ab848754"/>
-<approved hash="18,29,52cd6445f382b738"/>
-<approved hash="18,29,661628111143559e"/>
-<approved hash="18,29,1e6b5132975c82c1"/>
-<approved hash="18,29,b1a445d32439b801"/>
-<approved hash="18,29,3723c059bbcd7490"/>
-<approved hash="18,29,405c5e184c044d34"/>
-<approved hash="18,29,7119e9c1d547f41c"/>
-<approved hash="18,29,e92780197f2ea264"/>
-<approved hash="18,29,e1e2fe63e8872f75"/>
-<approved hash="18,29,f4a990796df2b5be"/>
-<approved hash="18,29,b6b0bf1ed390a578"/>
-<approved hash="18,29,6ea78cf4ef17cf0d"/>
-<approved hash="18,29,e310264d9a8f4aea"/>
-<approved hash="18,29,b74fbc1df415eb94"/>
-<approved hash="18,29,c16aa2a92f10c810"/>
-<approved hash="18,29,9ecebd827edc6ce1"/>
-<approved hash="18,29,ad4cba01ed49ccc4"/>
-<approved hash="18,29,73d7230207c4a40a"/>
-<approved hash="18,29,028baefd39dc491a"/>
-<approved hash="18,29,988c4e04ba5fbb5f"/>
-<approved hash="18,29,835c3f95a16e55f4"/>
-<approved hash="18,29,4f60b10cf3c0c3a6"/>
-<approved hash="18,29,8409ebb406c0a2a4"/>
-<approved hash="18,29,8dda129b678b15f3"/>
-<approved hash="18,29,01132284e3de5d84"/>
-<approved hash="18,29,91a03d99d0a13f86"/>
-<approved hash="18,29,77b37271659da939"/>
-<approved hash="18,29,84833167cd1662a1"/>
-<approved hash="18,29,eb4c06010ea3280b"/>
-<approved hash="18,29,748f811bda0ebe77"/>
-<approved hash="18,29,08ef452e505c714e"/>
-<approved hash="18,29,228663d6a7af17c4"/>
-<approved hash="18,29,1f9a8ddb704d4f78"/>
-<approved hash="18,29,baa42558d6d71e3c"/>
-<approved hash="18,29,28ee0230b3815b50"/>
-<approved hash="18,29,657b95b5bdaf3f4f"/>
-<approved hash="18,29,43af64a18aed2063"/>
-<approved hash="18,29,63b9a125469ef1ae"/>
-<approved hash="18,29,137fb6cc8a60e21a"/>
-<approved hash="18,29,6687d40171b1f9c8"/>
-<approved hash="18,29,cb702514e34ad5dd"/>
-<approved hash="18,30,e647b40d97652fbd"/>
-<approved hash="18,30,69b566b366ad69ab"/>
-<approved hash="18,30,68ab09ad09ad68af"/>
-<approved hash="18,30,abaf13ad13ababa9"/>
-<approved hash="18,30,b7a9d0abd0a8b7aa"/>
-<approved hash="18,30,94aacda8cda594a7"/>
-<approved hash="18,30,7da7eea5eea37da1"/>
-<approved hash="18,30,1ea10fa3705f1ea1"/>
-<approved hash="18,30,33a1135f1361339f"/>
-<approved hash="18,30,109f3e613e65109b"/>
-<approved hash="18,30,719b1d651d677199"/>
-<approved hash="18,30,92997467746a9368"/>
-<approved hash="18,30,8e68966a96698e6b"/>
-<approved hash="18,30,8a6b8b698b6e8a6c"/>
-<approved hash="18,30,976c886e88739771"/>
-<approved hash="18,30,7871897389717873"/>
-<approved hash="18,30,19730a710a711977"/>
-<approved hash="18,30,06bbd316d1945c8b"/>
-</errors>
 </board>
 </drawing>
 </eagle>
