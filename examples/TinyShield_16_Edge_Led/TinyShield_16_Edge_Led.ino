@@ -1,12 +1,16 @@
 /*
-TinyDuino Edge LED Demo
-  
-April 9 2014, by Ben Rose
+  TinyDuino 16 Edge LED Demo
 
-This example code is in the public domain.
+  This example turns on one LED at a time,
+  from 1 to 16 and then from 16 to 1.
+  This example code is in the public domain.
 
-http://www.tinycircuits.com
+  Written 09 April 2014
+  By Ben Rose
+  Modified 01 January 2019
+  By Hunter Hykes
 
+  https://TinyCircuits.com
 */
 
 void setup()
